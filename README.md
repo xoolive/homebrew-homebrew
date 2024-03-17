@@ -1,10 +1,9 @@
-# Xoolive Gander
 
 ## How do I install these formulae?
 
-`brew install xoolive/gander/<formula>`
+`brew install xoolive/homebrew/<formula>`
 
-Or `brew tap xoolive/gander` and then `brew install <formula>`.
+Or `brew tap xoolive/homebrew` and then `brew install <formula>`.
 
 ## Documentation
 
