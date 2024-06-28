@@ -1,20 +1,20 @@
 class Jet1090 < Formula
   desc "Real-time Mode S and ADS-B data with REST and ZMQ endpoints"
-  version "0.2.4"
+  version "0.2.5"
   on_macos do
     on_arm do
-      url "https://github.com/xoolive/rs1090/releases/download/jet1090-v0.2.4/jet1090-aarch64-apple-darwin.tar.xz"
-      sha256 "ea48a2af62af35d0042e3d31815ddc3eba11e3c8404b99412b57edf604f4560d"
+      url "https://github.com/xoolive/rs1090/releases/download/jet1090-v0.2.5/jet1090-aarch64-apple-darwin.tar.xz"
+      sha256 "4fa406687eec258554447405811e46a5a95f24753a5457fb501ba180a1abec5e"
     end
     on_intel do
-      url "https://github.com/xoolive/rs1090/releases/download/jet1090-v0.2.4/jet1090-x86_64-apple-darwin.tar.xz"
-      sha256 "dac12af12c0de4a6cd0ab3c90bdf0a4c90373b029393f918fb0f868276a43b73"
+      url "https://github.com/xoolive/rs1090/releases/download/jet1090-v0.2.5/jet1090-x86_64-apple-darwin.tar.xz"
+      sha256 "7d57a3ed2ec0d9632f163d83f4da50adb0a5b6197dff73e7f03118fbe578ed36"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/xoolive/rs1090/releases/download/jet1090-v0.2.4/jet1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e64d360d0d5376eab5ba0516ce5383aafd9c841116045b6ac2f7b9febceb0578"
+      url "https://github.com/xoolive/rs1090/releases/download/jet1090-v0.2.5/jet1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ffe59461c0f9ef8928c3314e9fa997e47c0c4166d98426ee1bc01d64ba51a546"
     end
   end
   license "MIT"
