@@ -1,21 +1,21 @@
 class Decode1090 < Formula
   desc "Companion application to rs1090 to decode Mode S and ADS-B signals"
   homepage "https://github.com/xoolive/rs1090"
-  version "0.3.0"
+  version "0.3.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/rs1090/releases/download/decode1090-v0.3.0/decode1090-aarch64-apple-darwin.tar.xz"
-      sha256 "b59818c1683bc9de2693dfbf9f85acd7041a63ebd030113c4ae02d137e30c58b"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.3.4/decode1090-aarch64-apple-darwin.tar.xz"
+      sha256 "74227feb5b09849ff5f2d2d98c5cd72bc4de609755380206c7efe16dcb0195d0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/rs1090/releases/download/decode1090-v0.3.0/decode1090-x86_64-apple-darwin.tar.xz"
-      sha256 "58aec83e9ea6290ce22c954b0dc5338d5357a383e534d0e9d2954ac59d066efb"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.3.4/decode1090-x86_64-apple-darwin.tar.xz"
+      sha256 "9bea2afcbb676459c1cf91434a8c62a415208952504c3071ce9ba16c815b3307"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/rs1090/releases/download/decode1090-v0.3.0/decode1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "58cbd98897047b3e43f1fa04bdb144f3a755fe7c4f212a39af4e4dc519726897"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.3.4/decode1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1c9a40e8c4728ad28108131c58e6f51379058e641713c65c513e25d3d14c6ca4"
     end
   end
   license "MIT"
