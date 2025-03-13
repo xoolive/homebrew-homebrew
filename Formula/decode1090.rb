@@ -1,36 +1,31 @@
 class Decode1090 < Formula
   desc "Companion application to rs1090 to decode Mode S and ADS-B signals"
   homepage "https://github.com/xoolive/rs1090"
-  version "0.4.4"
+  version "0.4.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/rs1090/releases/download/v0.4.4/decode1090-aarch64-apple-darwin.tar.xz"
-      sha256 "3b9a58726dcb9b3a3d51d52b4fe5ff6181fc9fa9fd1e3abc22fe329c52d62005"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.4.6/decode1090-aarch64-apple-darwin.tar.xz"
+      sha256 "3fe797e92b1efbf420e5f0c4efb500fb5f6fab078de9928868a0e0ef705521dd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/rs1090/releases/download/v0.4.4/decode1090-x86_64-apple-darwin.tar.xz"
-      sha256 "de0733ca146dc95042e977b02134c572448a87570e769cd69ad56d6f0fd7f5c6"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.4.6/decode1090-x86_64-apple-darwin.tar.xz"
+      sha256 "9b38d545e4e539b451fbf78dbb68f8877b666a71e9adf1f8a48bb0981c3f18b7"
     end
   end
-  if OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/xoolive/rs1090/releases/download/v0.4.4/decode1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "dff2c6b4b85c02745b9ba22cea96146536f97d9821b7cf312162193509339546"
-    end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/xoolive/rs1090/releases/download/v0.4.6/decode1090-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "5f8c89e18f8036f8336e47ff68da0a7dcc1d9a157df2cd3b31b2c37f4907b3e7"
   end
   license "MIT"
-  
   depends_on "soapyrtlsdr"
-  depends_on "soapysdr"
-  depends_on "soapysdr"
   depends_on "soapysdr"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "aarch64-apple-darwin":     {},
+    "x86_64-apple-darwin":      {},
+    "x86_64-pc-windows-gnu":    {},
+    "x86_64-unknown-linux-gnu": {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -48,15 +43,9 @@ class Decode1090 < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "decode1090"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "decode1090"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "decode1090"
-    end
+    bin.install "decode1090" if OS.mac? && Hardware::CPU.arm?
+    bin.install "decode1090" if OS.mac? && Hardware::CPU.intel?
+    bin.install "decode1090" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
