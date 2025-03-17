@@ -1,30 +1,37 @@
 class Jet1090 < Formula
   desc "A real-time comprehensive Mode S and ADS-B data decoder"
   homepage "https://github.com/xoolive/rs1090"
-  version "0.4.6"
+  version "0.4.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/rs1090/releases/download/v0.4.6/jet1090-aarch64-apple-darwin.tar.xz"
-      sha256 "918928d5583e36155d9dab84af28f6ea531173b1d9ab0bee9cb971c66d19e268"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.4.7/jet1090-aarch64-apple-darwin.tar.xz"
+      sha256 "9110e1fa36299a8ee56e8bbaad44625b5c1f873d1c7ecf65858d90ec1e2d7c81"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/rs1090/releases/download/v0.4.6/jet1090-x86_64-apple-darwin.tar.xz"
-      sha256 "0ed93ac09f7df84a566c68eeba03245d837deef172e2754fc8a54bd4575786f8"
+      url "https://github.com/xoolive/rs1090/releases/download/v0.4.7/jet1090-x86_64-apple-darwin.tar.xz"
+      sha256 "7be0f1b391cb2a4613e63db2e8985f0a1d8839896850c3fa483050a5e9bfdfb3"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/xoolive/rs1090/releases/download/v0.4.6/jet1090-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "a7949a1c9e81cf0b0ca3a2ae6d49d9ba37cffb1e18921d894c1938cf52b269b8"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/xoolive/rs1090/releases/download/v0.4.7/jet1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d7ad63211f0d1b44a2779c4004d14aa8f83b00a31a07f5ec8b2ec9601f1d6663"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/xoolive/rs1090/releases/download/v0.4.7/jet1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6cd7138ba6fc322a02d3e917d622cbdecc58b4774707b4f56a210410c7f6f7f6"
+    end
   end
   license "MIT"
   depends_on "soapyrtlsdr"
   depends_on "soapysdr"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":     {},
-    "x86_64-apple-darwin":      {},
-    "x86_64-pc-windows-gnu":    {},
-    "x86_64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
   def target_triple
@@ -45,6 +52,7 @@ class Jet1090 < Formula
   def install
     bin.install "jet1090" if OS.mac? && Hardware::CPU.arm?
     bin.install "jet1090" if OS.mac? && Hardware::CPU.intel?
+    bin.install "jet1090" if OS.linux? && Hardware::CPU.arm?
     bin.install "jet1090" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
