@@ -1,25 +1,25 @@
 class Ship162 < Formula
   desc "A real-time AIS data decoder"
   homepage "https://github.com/xoolive/ship162"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.2/ship162-aarch64-apple-darwin.tar.xz"
-      sha256 "7e7d3b1d760e42eaa5a8065d76336d14187ebf031b057eec5773ca286f5bbbac"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-aarch64-apple-darwin.tar.xz"
+      sha256 "ae2434be7708a0f3f965881e8c4ac335436f0302198e8ce07b9db87c454adaca"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.2/ship162-x86_64-apple-darwin.tar.xz"
-      sha256 "12a26381ab0ee23b5468e200819d5146581de858aa11ea614d9abc7c325f6362"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-x86_64-apple-darwin.tar.xz"
+      sha256 "6cab7f706854a9906d7cabc683b83e572216c5ff409ae6e2aa518bde36f10902"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.2/ship162-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "dadeb9753af235217467e39b5445fc1be6822b7e3aade81531777d8a0d89afbd"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "03a24a3ac71bb31ef317a02ba0c5acfe3f6b2e4333293bc8f6b3e1982bab4d0e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.2/ship162-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "aa4ab712563aa702ae382a082faf3b6ce021c55c3fecab36c990a698e3cd55c3"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2e08b587daa40aed36ba742446fab41b3fe8c1230c17c6eeba36ef43aaf5d805"
     end
   end
   license "MIT"
