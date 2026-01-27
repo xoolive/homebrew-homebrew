@@ -1,30 +1,29 @@
 class Jet1090 < Formula
   desc "A real-time comprehensive Mode S and ADS-B data decoder"
   homepage "https://github.com/xoolive/jet1090"
-  version "0.4.15"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.4.15/jet1090-aarch64-apple-darwin.tar.xz"
-      sha256 "8878e78ecf1ff8ba0a615821fb0756c95c5099d0fa6f4ca4578413ae8bee3a37"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.0/jet1090-aarch64-apple-darwin.tar.xz"
+      sha256 "fc538a3cf10adbc869b03589044861f1f9270836ea36825d23fad9de1bd88bce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.4.15/jet1090-x86_64-apple-darwin.tar.xz"
-      sha256 "91eb4d58ea0df6bf5ec2daa51d46ba72b1aac00dffef8232157e2292352763e1"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.0/jet1090-x86_64-apple-darwin.tar.xz"
+      sha256 "6346392144d653ee82775af3b5f064196ab91165549badbfadf8fb4956cc5697"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.4.15/jet1090-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8b81b84cd452f130ccde3c5329ffedee7a4fbccbd4f49c14615f53c01d7918b4"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.0/jet1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "067015fe722baf2ad1e99d0cf495f7c152a4217e8fb075e51a9b39b88ee731f7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.4.15/jet1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "219ee028b9a63e4d62cd522f5bf6208e56aea37c1d4ec19e7d23458dd62b4159"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.0/jet1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "24ee11faee3fbe11021cb78c968fd1bd764dcf778fcd61811bec6c6b9058f3c1"
     end
   end
   license "MIT"
-  depends_on "soapyrtlsdr"
-  depends_on "soapysdr"
+  depends_on "libusb"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
