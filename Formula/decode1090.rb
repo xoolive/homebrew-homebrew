@@ -1,25 +1,25 @@
 class Decode1090 < Formula
   desc "Companion application to rs1090 to decode Mode S and ADS-B signals"
   homepage "https://github.com/xoolive/jet1090"
-  version "0.5.1"
+  version "0.5.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.1/decode1090-aarch64-apple-darwin.tar.xz"
-      sha256 "e697be4a503de6db2c26d3cbad8a5faeab3297d158afda36a992f7029d9425a9"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-aarch64-apple-darwin.tar.xz"
+      sha256 "f4b32a29de62e63190afb6d015cd5e0d80def4f6cbb45e9c4d4340187f5372af"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.1/decode1090-x86_64-apple-darwin.tar.xz"
-      sha256 "9fc82a99be3b94fe063d30978aa111aa0cc625cb3086d80b721738c3ba477443"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-x86_64-apple-darwin.tar.xz"
+      sha256 "b2b4921b836d16d43ec75de001f1a4463b7bfb4d3f5a20c98fb68ffd709edd7e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.1/decode1090-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f0af78f6391ca9ec340e78459e7ff4a21d0b525601eb612613305e3b3b72e79b"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "751d69d084559269706aac07432a8d1a364b53d0cb2658fe5cea665789eebc5d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.1/decode1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b87acc98e28e72fee7af823882fe00654334a838844df30a75ad31d013ec2652"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "437b37d1cff7fa179811544b3bafe4c66b5c6aeb1ba4515bd9e1558383ae6f68"
     end
   end
   license "MIT"
