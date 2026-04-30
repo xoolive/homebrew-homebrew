@@ -1,34 +1,34 @@
 class Ship162 < Formula
   desc "A real-time AIS data decoder"
   homepage "https://github.com/xoolive/ship162"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-aarch64-apple-darwin.tar.xz"
-      sha256 "ae2434be7708a0f3f965881e8c4ac335436f0302198e8ce07b9db87c454adaca"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.4/ship162-aarch64-apple-darwin.tar.xz"
+      sha256 "e7c134130503a45ea7d0fc2283ca958068fc430427e51eb9d7b034633b38f63b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-x86_64-apple-darwin.tar.xz"
-      sha256 "6cab7f706854a9906d7cabc683b83e572216c5ff409ae6e2aa518bde36f10902"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.4/ship162-x86_64-apple-darwin.tar.xz"
+      sha256 "73efe14d60b19c3ed62541f0e9a9e69115785615e6eb18a48e0089e5e708518c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "03a24a3ac71bb31ef317a02ba0c5acfe3f6b2e4333293bc8f6b3e1982bab4d0e"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.4/ship162-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8562e0abd612ef5728dcb2d1601bcc34ece322d3ec61b917d998e59d4288f195"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.3/ship162-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2e08b587daa40aed36ba742446fab41b3fe8c1230c17c6eeba36ef43aaf5d805"
+      url "https://github.com/xoolive/ship162/releases/download/v0.1.4/ship162-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "da9d09719b949a9dc629a4c3f5a6e83296c585ed384e99173036791fbad59759"
     end
   end
   license "MIT"
-  depends_on "libusb"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
     "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
