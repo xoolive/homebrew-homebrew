@@ -1,29 +1,28 @@
 class Decode1090 < Formula
   desc "Companion application to rs1090 to decode Mode S and ADS-B signals"
   homepage "https://github.com/xoolive/jet1090"
-  version "0.5.2"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-aarch64-apple-darwin.tar.xz"
-      sha256 "f4b32a29de62e63190afb6d015cd5e0d80def4f6cbb45e9c4d4340187f5372af"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-aarch64-apple-darwin.tar.xz"
+      sha256 "caea85caa150a7ef097e0cfce901881ea05fedff2aa9bb15b61c69b90d9b6ab7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-x86_64-apple-darwin.tar.xz"
-      sha256 "b2b4921b836d16d43ec75de001f1a4463b7bfb4d3f5a20c98fb68ffd709edd7e"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-x86_64-apple-darwin.tar.xz"
+      sha256 "13fbaba1e1006b769d9aefd803393213925b6d9c99d4aa146e1469409ee93246"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "751d69d084559269706aac07432a8d1a364b53d0cb2658fe5cea665789eebc5d"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "07ac29aa93dbfdf33c5c1954f068c9d9544274c75d421d367cdcb7e3590384fb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.5.2/decode1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "437b37d1cff7fa179811544b3bafe4c66b5c6aeb1ba4515bd9e1558383ae6f68"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "077a62c901735fae7a703cdae57e2c2306d941d7e7687420b7ec8e56ac740cb5"
     end
   end
   license "MIT"
-  depends_on "libusb"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
