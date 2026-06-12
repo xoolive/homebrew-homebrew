@@ -1,25 +1,25 @@
 class Fmradio < Formula
   desc "An FM radio demodulator and RDS decoder in pure Rust"
   homepage "https://github.com/xoolive/desperado"
-  version "0.4.1"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/fmradio-aarch64-apple-darwin.tar.xz"
-      sha256 "b94009db7c45dab2e27587994329e15bacdc4e159cd1c75a3fd4964f046bd6ea"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-aarch64-apple-darwin.tar.xz"
+      sha256 "1a61527481858370c4359cba8953d5ac868d4b52067850cba55024d1d7d05202"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/fmradio-x86_64-apple-darwin.tar.xz"
-      sha256 "63c4c6a75f946aed9f3325c4b48dbcaa0af686239db20d3b397871003331a2cd"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-x86_64-apple-darwin.tar.xz"
+      sha256 "9e2982fe1099517bca735031bf62ccabe50ba8787c1d3d4fff63867bd2c56048"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/fmradio-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8042b6f03c235da099702829d88f4151a90fc81b3c314c8e7d2ba735ed9ebb3d"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cc3247b48746ac4ed73642cfee49176f51d90c304c8be55c369ace75a2d32fa8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/fmradio-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "285034c8c03d0095fb9343937348b90151ca00c012375808926c9884fc485b9a"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2b8ba2ab63779a7e450a64e1d087c8e95f4d534966f6e6d92ea02539d6e1e6a3"
     end
   end
   license "MIT"
