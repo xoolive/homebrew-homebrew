@@ -1,25 +1,25 @@
 class Voracious < Formula
   desc "VOR signal decoder for aviation navigation"
   homepage "https://github.com/xoolive/desperado"
-  version "0.4.1"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/voracious-aarch64-apple-darwin.tar.xz"
-      sha256 "3b9128b85c8797a3962a970c5f1177f823f2a6e5e901411db2b6be207d551cf9"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-aarch64-apple-darwin.tar.xz"
+      sha256 "5cd073957207161faa0138ecb26744889b9244fcce38b82b2157ab3d050c7ebe"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/voracious-x86_64-apple-darwin.tar.xz"
-      sha256 "a4e762eedda951d47171a32799ccab68389a48d06f497efa3649d102955a6ac7"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-x86_64-apple-darwin.tar.xz"
+      sha256 "5e151c2766dd0e846e28a288c220b60971f1c331fefa48fcb8d4614db29a6f52"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/voracious-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f0f2fdbeddbe1db440f717e65ae621902eb5d7fc2b676e1f25e9a0fec790459e"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "10c1618a549bc585d2f9ed2f1a9deade4d98a16450455f6f30484cc5f9deea6b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.1/voracious-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "85e135ab42ec5a9cef435aed3133ba321ac95af0e79fc3f6e1eb6eca7c228ccb"
+      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "768367069f2161df0acd874c2b620eb44fc3fee1cbf4c9110f3fab79f5dc874f"
     end
   end
   license "MIT"
