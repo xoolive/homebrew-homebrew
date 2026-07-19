@@ -1,25 +1,25 @@
 class Datalink < Formula
   desc "Decode aviation datalink traffic from payloads, SDR, files, and Airframes.io"
   homepage "https://github.com/xoolive/datalink"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.2.0/datalink-aarch64-apple-darwin.tar.xz"
-      sha256 "0e033afcd11c80f1abfbc760a23fd43eac31a96d3ec5820a200d41b4794cff57"
+      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.3.0/datalink-aarch64-apple-darwin.tar.xz"
+      sha256 "606775f2e6d6456ecae1fa343f85b91ef3eaabe5bd71770d891b0a97e7dfbabf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.2.0/datalink-x86_64-apple-darwin.tar.xz"
-      sha256 "eb62b5df87d10d21bf1dece2c80a1a5cb618ce24ec3b53950797fcd75efea20a"
+      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.3.0/datalink-x86_64-apple-darwin.tar.xz"
+      sha256 "3b4d699153991399645cc0dfa0d23f1ce98389bee3d308074a2898f94d8b568f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.2.0/datalink-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9b8164e72800de4611fa0e41ef02cc207d23adf82456cd3b57f3f1c7c609cc3e"
+      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.3.0/datalink-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "28f70479331396606796be5ffa439e916ddff7a45bbad92660ff445f47f75c19"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.2.0/datalink-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "815f6f58748c5a2f0d6dc18b982bd4577de258104a1ebd537019329480bced37"
+      url "https://github.com/xoolive/datalink/releases/download/datalink-v0.3.0/datalink-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "745796cc1bf32f539e4baea266a78666d761a786b75d763af51ec3d4cbf00be5"
     end
   end
   license "MIT"
