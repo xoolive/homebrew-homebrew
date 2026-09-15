@@ -1,25 +1,25 @@
 class Voracious < Formula
   desc "VOR signal decoder for aviation navigation"
   homepage "https://github.com/xoolive/desperado"
-  version "0.4.2"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-aarch64-apple-darwin.tar.xz"
-      sha256 "5cd073957207161faa0138ecb26744889b9244fcce38b82b2157ab3d050c7ebe"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/voracious-aarch64-apple-darwin.tar.xz"
+      sha256 "dbaefe0709448c02345e304a27cef03479e68b22fa578c16dc0702685c651eb0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-x86_64-apple-darwin.tar.xz"
-      sha256 "5e151c2766dd0e846e28a288c220b60971f1c331fefa48fcb8d4614db29a6f52"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/voracious-x86_64-apple-darwin.tar.xz"
+      sha256 "4d76bc96b58c9f5349c9b4a740b4e0860ae8b39fbdab61bd77b1404f99127461"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "10c1618a549bc585d2f9ed2f1a9deade4d98a16450455f6f30484cc5f9deea6b"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/voracious-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f094b0104342d1b442f09a7c6492730deca9fc76669ca3272fe37897edcfcc0f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/voracious-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "768367069f2161df0acd874c2b620eb44fc3fee1cbf4c9110f3fab79f5dc874f"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/voracious-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "51d1879d8900d9bfa9efe89a84a676f4f4b5ec42fb5788e24c817b62c7df6de6"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Voracious < Formula
   end
 
   def install
-    bin.install "voracious" if OS.mac? && Hardware::CPU.arm?
-    bin.install "voracious" if OS.mac? && Hardware::CPU.intel?
-    bin.install "voracious" if OS.linux? && Hardware::CPU.arm?
-    bin.install "voracious" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "voracious"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "voracious"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "voracious"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "voracious"
+    end
 
     install_binary_aliases!
 
