@@ -1,25 +1,25 @@
 class Fmradio < Formula
   desc "An FM radio demodulator and RDS decoder in pure Rust"
   homepage "https://github.com/xoolive/desperado"
-  version "0.4.2"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-aarch64-apple-darwin.tar.xz"
-      sha256 "1a61527481858370c4359cba8953d5ac868d4b52067850cba55024d1d7d05202"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/fmradio-aarch64-apple-darwin.tar.xz"
+      sha256 "c693eb42fdcf86c748e529c1f8981a6899c0d5fc4925d683f76c4bed577b2b59"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-x86_64-apple-darwin.tar.xz"
-      sha256 "9e2982fe1099517bca735031bf62ccabe50ba8787c1d3d4fff63867bd2c56048"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/fmradio-x86_64-apple-darwin.tar.xz"
+      sha256 "377a11f2ff2ea417ecffb572cbb61193fc977078df05c6f15ee4cb6c80467a26"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cc3247b48746ac4ed73642cfee49176f51d90c304c8be55c369ace75a2d32fa8"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/fmradio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8c4f99502e42518b9d756cafdd41a25571a15ffb65df797d2f1f6fa8e3eaa0a7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/fmradio-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2b8ba2ab63779a7e450a64e1d087c8e95f4d534966f6e6d92ea02539d6e1e6a3"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/fmradio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0c64f722b7ed20598e20a36ea9fdab85ba748ac5a53e5f3281a1b9911ed62274"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Fmradio < Formula
   end
 
   def install
-    bin.install "fmradio" if OS.mac? && Hardware::CPU.arm?
-    bin.install "fmradio" if OS.mac? && Hardware::CPU.intel?
-    bin.install "fmradio" if OS.linux? && Hardware::CPU.arm?
-    bin.install "fmradio" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "fmradio"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "fmradio"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "fmradio"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "fmradio"
+    end
 
     install_binary_aliases!
 
