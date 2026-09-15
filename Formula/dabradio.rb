@@ -1,25 +1,25 @@
 class Dabradio < Formula
   desc "A DAB/DAB+ digital radio decoder"
   homepage "https://github.com/xoolive/desperado"
-  version "0.4.2"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/dabradio-aarch64-apple-darwin.tar.xz"
-      sha256 "9a122f72d7dcf4df1c0c33a8a020fa62fe9184cf814d1d96377d6ae37afbd0f4"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-aarch64-apple-darwin.tar.xz"
+      sha256 "25a8149bda1e00fc7510da4e65c2776498f22e272e9e6990fff36cda467c2732"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/dabradio-x86_64-apple-darwin.tar.xz"
-      sha256 "a6d6ac7cf7d482984ce0607d8cec73a32e47ebf691e2ab47e24bf837e4ab96cc"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-x86_64-apple-darwin.tar.xz"
+      sha256 "9aedd52433924d3ce0e83604df0e098ee75837e990dc3b817a90bf0ae3cf132d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/dabradio-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "767e9d41adb218b7b807945b3a769b2322447aec4f1ee6d41c8fbf5ea669ac43"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1aad1ea02670fcdc9a4249f08cb7a6c261397e84c2885ea7faad05fb6341984d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.4.2/dabradio-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ca224a2c762934a26555ad354ea83c8ec2163c45cb2adb65663da8f8d4a6f66c"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fbad5149025fc24afbdede242ed75701388596e9c4cfa24afe0fe9f2d5ff61ca"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Dabradio < Formula
   end
 
   def install
-    bin.install "dabradio" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dabradio" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dabradio" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dabradio" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dabradio"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dabradio"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dabradio"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dabradio"
+    end
 
     install_binary_aliases!
 
