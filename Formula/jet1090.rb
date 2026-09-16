@@ -1,25 +1,25 @@
 class Jet1090 < Formula
   desc "A real-time comprehensive Mode S and ADS-B data decoder"
   homepage "https://github.com/xoolive/jet1090"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/jet1090-aarch64-apple-darwin.tar.xz"
-      sha256 "0f91bad19ab5ed2d6f3e05f469412e1e3810be17170bf9417f02199331bc7a10"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/jet1090-aarch64-apple-darwin.tar.xz"
+      sha256 "87bb760e6e4f0d6596ca98f04b26e03e56e43f9de94453e2dfd819ec02a6bb23"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/jet1090-x86_64-apple-darwin.tar.xz"
-      sha256 "c34db15914ead1e56346412fc38ab20054758b91daf6fffdf9956bb15b083e30"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/jet1090-x86_64-apple-darwin.tar.xz"
+      sha256 "a70726425c50ea67d669a6a46da6f9fd6ed13f75ebae991cdd75dad9e0d81079"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/jet1090-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "63b739cdae5f9417b1d2d8bb432c0f26695b8e71121c49b134a7020e92ef26dc"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/jet1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "75b6652ddae3abbe2bcb5dd96c5f13c7fae14339aa17d021239c39fe4df6bf3e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/jet1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "457e1a9d7e80b9211b01da613103932f885f0a51365eed1e4a3903483357d9c0"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/jet1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "98d175f458807848c4f9959e408f46efacfe573b1dd8c02130519534afb53e9d"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Jet1090 < Formula
   end
 
   def install
-    bin.install "jet1090" if OS.mac? && Hardware::CPU.arm?
-    bin.install "jet1090" if OS.mac? && Hardware::CPU.intel?
-    bin.install "jet1090" if OS.linux? && Hardware::CPU.arm?
-    bin.install "jet1090" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "jet1090"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "jet1090"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "jet1090"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "jet1090"
+    end
 
     install_binary_aliases!
 
