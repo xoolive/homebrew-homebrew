@@ -1,25 +1,25 @@
 class Decode1090 < Formula
   desc "Companion application to rs1090 to decode Mode S and ADS-B signals"
   homepage "https://github.com/xoolive/jet1090"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-aarch64-apple-darwin.tar.xz"
-      sha256 "caea85caa150a7ef097e0cfce901881ea05fedff2aa9bb15b61c69b90d9b6ab7"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/decode1090-aarch64-apple-darwin.tar.xz"
+      sha256 "f52918c26d2f3c10ea066a71dabfc1baf004018743e05b664a1f07dc749619d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-x86_64-apple-darwin.tar.xz"
-      sha256 "13fbaba1e1006b769d9aefd803393213925b6d9c99d4aa146e1469409ee93246"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/decode1090-x86_64-apple-darwin.tar.xz"
+      sha256 "0b75dcddd91c75d261e6248c8ecac5090293334b42bb7a8571eaedc605ddc901"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "07ac29aa93dbfdf33c5c1954f068c9d9544274c75d421d367cdcb7e3590384fb"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/decode1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "953fb5ce3b8317d78e9127e81552e9f25b24ccc18d3ac53bb0979928fabb344d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.6.0/decode1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "077a62c901735fae7a703cdae57e2c2306d941d7e7687420b7ec8e56ac740cb5"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.7.0/decode1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1ae0f8e47db0840ce9106117ba8e31c3dd2d9775ca0caef0e26efaf6f54daf17"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Decode1090 < Formula
   end
 
   def install
-    bin.install "decode1090" if OS.mac? && Hardware::CPU.arm?
-    bin.install "decode1090" if OS.mac? && Hardware::CPU.intel?
-    bin.install "decode1090" if OS.linux? && Hardware::CPU.arm?
-    bin.install "decode1090" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "decode1090"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "decode1090"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "decode1090"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "decode1090"
+    end
 
     install_binary_aliases!
 
