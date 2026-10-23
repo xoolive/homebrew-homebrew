@@ -1,25 +1,25 @@
 class Dabradio < Formula
   desc "A DAB/DAB+ digital radio decoder"
   homepage "https://github.com/xoolive/desperado"
-  version "0.5.0"
+  version "0.5.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-aarch64-apple-darwin.tar.xz"
-      sha256 "25a8149bda1e00fc7510da4e65c2776498f22e272e9e6990fff36cda467c2732"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.1/dabradio-aarch64-apple-darwin.tar.xz"
+      sha256 "94fda61f3d9d39d6444953e8af93738ed7a53bba2252f37bfc0fcfcc97ad52db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-x86_64-apple-darwin.tar.xz"
-      sha256 "9aedd52433924d3ce0e83604df0e098ee75837e990dc3b817a90bf0ae3cf132d"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.1/dabradio-x86_64-apple-darwin.tar.xz"
+      sha256 "f02b40e5eedfe1f2018f6810fc290eb3a5c7c18b14be007bee0e97141ef6709d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1aad1ea02670fcdc9a4249f08cb7a6c261397e84c2885ea7faad05fb6341984d"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.1/dabradio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4f57c2dfc69ae0aabad00b1acaeb362a8eb44d3e9406f9b0241b44777bc165c1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/desperado/releases/download/v0.5.0/dabradio-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fbad5149025fc24afbdede242ed75701388596e9c4cfa24afe0fe9f2d5ff61ca"
+      url "https://github.com/xoolive/desperado/releases/download/v0.5.1/dabradio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bfa81e97fcf7b9afd266f3f58b242d6d4a5cdc14edb193ae4eace3005af76b70"
     end
   end
   license "MIT"
