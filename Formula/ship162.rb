@@ -1,25 +1,25 @@
 class Ship162 < Formula
   desc "A real-time AIS data decoder"
   homepage "https://github.com/xoolive/ship162"
-  version "0.1.5"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.5/ship162-aarch64-apple-darwin.tar.xz"
-      sha256 "9d928f510f9685157c14cd6fd0403041c9e73ad1e17ce8b54c35fa7d54ec90f7"
+      url "https://github.com/xoolive/ship162/releases/download/v0.2.0/ship162-aarch64-apple-darwin.tar.xz"
+      sha256 "4f7b3c55981034341c042fd3905278ed203f140a38914eb36c78ed6c8ce42ed4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.5/ship162-x86_64-apple-darwin.tar.xz"
-      sha256 "a4eabf44536d0015ef0c85ca5a915acac2c8f39ba85bc9ec17e8fb44aaa85a26"
+      url "https://github.com/xoolive/ship162/releases/download/v0.2.0/ship162-x86_64-apple-darwin.tar.xz"
+      sha256 "dcc452c2a76ca0be4eaff2373c28cb9def48fd84bc7c0383e707ce94411e14f1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.5/ship162-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "870ce7184848b441b4dcb08a056a3e2a22c40061bbf59e4ca158dc6b50d870d6"
+      url "https://github.com/xoolive/ship162/releases/download/v0.2.0/ship162-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cf88acc2418c04721007ad35abfa510cbcfb0cccab082c3f1dc289e9bc6d177f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/ship162/releases/download/v0.1.5/ship162-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "40691937754c84e61fa76fef45c5468276baf1cae25dfb5b295dad0bbd22ab2c"
+      url "https://github.com/xoolive/ship162/releases/download/v0.2.0/ship162-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "75e36d01de124c1d2ad0c9bcdd0a6d8095255716558cea315a91d36ce7d2cfeb"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Ship162 < Formula
   end
 
   def install
-    bin.install "ship162" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ship162" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ship162" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ship162" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ship162"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ship162"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ship162"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ship162"
+    end
 
     install_binary_aliases!
 
