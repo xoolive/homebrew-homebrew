@@ -1,25 +1,25 @@
 class Jet1090 < Formula
   desc "A real-time comprehensive Mode S and ADS-B data decoder"
   homepage "https://github.com/xoolive/jet1090"
-  version "0.8.0"
+  version "0.8.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.8.0/jet1090-aarch64-apple-darwin.tar.xz"
-      sha256 "3af1817e3f504f8d1f218e7845900a1ec71eb8bf57aaa63155e81cba38097111"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.8.1/jet1090-aarch64-apple-darwin.tar.xz"
+      sha256 "f9d2d5c9513a3d0dd0e6ea0d786a285556d741ba671a91c906cbec83b586c716"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.8.0/jet1090-x86_64-apple-darwin.tar.xz"
-      sha256 "e613663cdf6d3d5349395633777e5b05ff25f962f1bfdccc4accc04a00a50b4d"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.8.1/jet1090-x86_64-apple-darwin.tar.xz"
+      sha256 "3a8fb0d6ab072cf62dd0d1d6ff3bed8b26519494a6b3387ef064d09e67383b45"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.8.0/jet1090-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1e3af5cb4af4606e969968941787abfc4adff9d175d6fdbfb1f9c4f6aa1e102d"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.8.1/jet1090-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5eed2bd69dfdb53a868bd420f0330ef44192478c29d53f27c72b62f45ece08b2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xoolive/jet1090/releases/download/v0.8.0/jet1090-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0fca6224f138e34716dee03028f630771d8e17c9d63670c64a0e0fd5ac2d7429"
+      url "https://github.com/xoolive/jet1090/releases/download/v0.8.1/jet1090-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "639819205fc50c9824ca792e120c5ace469e689dd88bfce52526a54ec89c10d2"
     end
   end
   license "MIT"
